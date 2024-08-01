@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário Simples</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Este campo puxa insere o css -->
+
+</head>
+<body>
+
+
+  <header>
+    <div class="container">
+      <div class="imagem-com-fundo-transparente">
+        <img src="img/dog2.png" alt="imagemflexivel">
+      </div>
+      <h1>Hub do Desenvolvedor</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Início</a></li>
+          <li><a href="cadastro.html">Cadastro</a></li>
+          <li><a href="pagina de testes.html">pagina de testes</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <div class="containerformulario">
+    <h2>Formulário de Cadastro</h2>
+    <form action="#">
+
+      <label for="nome">Nome completo:</label>
+      <input type="text" id="nome" name="nome" required />
+      <!-- required para obrigar a preencher um campo  -->
+
+      <label for="idade">Idade:</label>
+      <input type="number" id="idade" name="idade" required />
+
+      <label for="cidade">Cidade:</label>
+      <input type="text" id="cidade" name="cidade" required />
+
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone" name="telefone" required />
+
+      <label for="email">Email:</label>
+      <input type="text" id="telefone" name="telefone" required />
+
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulário Simples</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="scripts.js"></script>  <!-- link para usar JavaScript-->
+  <!-- Este campo puxa insere o css -->
+
+</head>
+<body>
+
+
+  <header>
+    <div class="container">
+      <div class="imagem-com-fundo-transparente">
+        <img src="img/dog2.png" alt="imagemflexivel">
+      </div>
+      <h1>Hub do Desenvolvedor</h1>
+      <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="pagina de testes.html">pagina de testes</a></li>
+            <li><a href="sobre.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+
+
+  <p> Testendo uma função com "for" no javascript  pelo console </p>
+  <button onclick=numerosImpares()>Impares </button>
+   <br>
+   <p> Testendo outra função função com "for" no javascript pelo console </p>           
+  <button onclick=soma()>Soma </button>
+  <br>
+  <br>
+  <p>Construa uma página com dois inputs do tipo text um para nome e outro para idade, e um botão, ao clicar no botão, mostre uma mensagem como esta" Juarez tem 22 anos" </p>
+
+
+
+
+    <h2>Informe seu nome e idade exercicio 1-2 </h2>
+    <div class="form-group">
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" placeholder="Digite seu nome">
+    </div>
+    <div class="form-group">
+      <label for="idade">Idade:</label>
+      <input type="text" id="idade" placeholder="Digite sua idade">
+    </div>
+    <button class="btn" onclick="exibirMensagem()">Mostrar mensagem</button>
+
+    <br>
+    <br>
+    <p>Construa uma pagina com dois inputs do tipo Text e um botão. Ao clicar no botão, mostre o resultado da soma dos valores atribuidos aos inputs  </p>
+   
+
+
+    <h2>Informe os valores para soma 3 e mudar as cores 4 </h2>
+    <div class="form-group">
+      <label for="Valor1">Valor1:</label>
+      <input type="text" id="valor1" placeholder="Digite o valor 1">
+    </div>
+    <div class="form-group">
+      <label for="Valor2">Valor2:</label>
+      <input type="text" id="valor2" placeholder="Digite o valor 2">
+    </div>
+    <button id="botaoCor" class="btn" onclick="exibirMensagem2()">Mostrar mensagem</button>
+    <br>
+    <br>
+    <p>Lista dos 10 Exercicios </p>
+
+
+ <div class="container">
+  <h2>01 - Alterar Cor de Fundo</h2>
+  <button onclick="changeColor('red')">Vermelho</button>
+  <button onclick="changeColor('green')">Verde</button>
+  <button onclick="changeColor('blue')">Azul</button>
+  <button onclick="changeColor('yellow')">Amarelo</button>
+</div>
+
+
+<div class="container">
+  <h2>02 - Alterar Cor de Fundo com Links</h2>
+  <a href="#" onmouseover="changeColor('red')">Vermelho</a>
+  <a href="#" onmouseover="changeColor('green')">Verde</a>
+  <a href="#" onmouseover="changeColor('blue')">Azul</a>
+  <a href="#" onmouseover="changeColor('yellow')">Amarelo</a>
+</div>
+
+
+    <div class="container">
+      <h2>03 - Alterar Cor de Fundo com Seleção</h2>
+      <select title="Mudar cor" onchange="changeColor(this.value)">
+          <option value="">Selecione uma cor</option>
+          <option value="red">Vermelho</option>
+          <option value="green">Verde</option>
+          <option value="blue">Azul</option>
+          <option value="yellow">Amarelo</option>
+      </select>
+  </div>
+
+
+<div class="container">
+  <h2>04 - Ocultar/Mostrar Parágrafo</h2>
+  <p id="texto">Palmeiras não tem mundial</p>
+  <button onclick="toggleText()">Ocultar/Mostrar</button>
+</div>
+
+
+<div class="container">
+  <h2>05 - Checkboxes com Botão Desabilitado</h2>
+  
+  <label> <input type="checkbox" id="check1" onclick="checkCheckboxes()"> Opção 1<br> </label>
+
+  <label> <input type="checkbox" id="check2" onclick="checkCheckboxes()"> Opção 2<br></label>
+
+  <label>  <input type="checkbox" id="check3" onclick="checkCheckboxes()"> Opção 3<br></label>
+
+  <label>  <input type="checkbox" id="check4" onclick="checkCheckboxes()"> Opção 4<br></label>
+  <button id="submitButton" disabled>Enviar</button>
+</div>
+
+
+<div class="container">
+  <h2>06 - Trocar Cor do Texto e Fundo</h2>
+  <p id="paragrafo">Bora codar</p>
+  <button onclick="changeTextColor('white')">Texto Branco</button>
+  <button onclick="changeTextColor('black')">Texto Preto</button>
+  <button onclick="changeBgColor('white')">Fundo Branco</button>
+  <button onclick="changeBgColor('black')">Fundo Preto</button>
+</div>
+
+
+<div class="container">
+  <h2>07/08 - Alterar Tamanho da Fonte</h2>
+  <p id="paragrafo2">Uhulllllllllllllll</p>
+  <button onclick="increaseFontSize()">Aumentar Fonte</button>
+  <button onclick="decreaseFontSize()">Diminuir Fonte</button>
+  <button onclick="toUpperCase()">Maiúsculas</button>
+  <button onclick="toLowerCase()">Minúsculas</button>
+</div>
+
+
+<div class="container">
+  <h2>09 - Formulário de Cadastro</h2>
+  <form id="cadastroForm" onsubmit="return validateForm()">
+      <label for="login">Login:</label>
+      <input type="text" id="login" name="login"><br>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha"><br>
+
+      <label for="confirmarSenha">Confirmar Senha:</label>
+      <input type="password" id="confirmarSenha" name="confirmarSenha"><br>
+
+      <button type="submit">Cadastrar</button>
+  </form>
+</div>
+
+
+<div class="container">
+  <h2>10 - Formulário de Cadastro de Cliente</h2>
+  <form>
+      <label for="nome">Nome:</label>
+      <input type="text" id="nome" name="nome"><br>
+
+      <label>Pessoa:
+      <input type="radio" id="fisica" name="pessoa" value="fisica" onclick="toggleFields()"> Física
+      <input type="radio" id="juridica" name="pessoa" value="juridica" onclick="toggleFields()"> Jurídica<br></label>
+
+      <label for="cpf">CPF:</label>
+      <input type="text" id="cpf" name="cpf" disabled><br>
+
+      <label for="cnpj">CNPJ:</label>
+      <input type="text" id="cnpj" name="cnpj" disabled><br>
+
+      <label for="dataNascimento">Data de Nascimento:</label>
+      <input type="date" id="dataNascimento" name="dataNascimento" disabled><br>
+
+      <label for="endereco">Endereço:</label>
+      <input type="text" id="endereco" name="endereco"><br>
+
+      <label for="cep">CEP:</label>
+      <input type="text" id="cep" name="cep"><br>
+
+      <label for="telefone">Telefone:</label>
+      <input type="text" id="telefone" name="telefone"><br>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email"><br>
+
+      <button type="submit">Cadastrar</button>
+  </form>
+</div>
+
+
+
+
+    <br>
+    <br>
+
+
+
+
+
+
+</body>
+</html>
